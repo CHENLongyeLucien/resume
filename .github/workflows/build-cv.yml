@@ -20,6 +20,7 @@ jobs:
         with:
           root_file: Longye_Chen_cv.tex
           compiler: lualatex
+          args: -file-line-error -halt-on-error -interaction=nonstopmode
 
       - name: Commit updated PDF
         run: |
