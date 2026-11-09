@@ -1,0 +1,88 @@
+\documentclass[11pt]{cv_template}
+
+\begin{document}
+
+\begin{cv}
+
+\cvheader
+{Longye Chen}
+{+33 6 02 53 61 19}
+{lchen031205@gmail.com}
+{github.com/CHENLongyeLucien}
+{}
+{linkedin.com/in/longye-chen-11ba56309/}
+
+\begin{center}
+\textit{Recherche de stage en développement logiciel (1 à 3 mois) dès juin 2027}
+\end{center}
+
+\begin{cvsection}{Formation}
+
+\begin{cvsubsection}
+{Sorbonne Université} {Licence Informatique} {Sept. 2025 -- Présent} {Paris, France}
+\listitem Développement web, Bases de données, Algorithmique, Programmation orientée objet, Architecture des machines
+\end{cvsubsection}
+
+\begin{cvsubsection}
+{Sorbonne Université} {Licence parcours Mathématiques et Informatique} {Sept. 2023 -- Juin 2025} {Paris, France}
+\listitem Programmation (Python, C), Science des données, Algèbre linéaire, Probabilités et statistiques, Analyse
+\end{cvsubsection}
+
+\end{cvsection}
+
+\begin{cvsection}{Expérience}
+
+\begin{cvsubsection}
+{Stagiaire Systèmes et Développement IA} {Lessonia} {Juin -- Sept. 2026} {Bretagne, France}
+
+\listitem Contribué au déploiement d'un agent IA auto-hébergé (Ollama, Open WebUI) : connecté Proxmox VE et GLPI par webhooks pour générer chaque jour la synthèse de 5 à 10 tickets.
+\listitem Participé au développement en Python d'un outil d'interrogation en langage naturel des bases PostgreSQL et MSSQL, 100\,\% en local et en lecture seule (modèles Qwen et Gemma).
+\listitem Automatisé l'arrêt ordonné en cas de coupure : rétabli la protection de l'infrastructure (7 hôtes Proxmox, 117 VM, 2 SAN DataCore) avec arrêt complet en 15 min, alertes en temps réel et règles d'arrêt selon les dépendances entre services.
+
+\end{cvsubsection}
+
+\end{cvsection}
+
+\begin{cvsection}{Projets}
+
+\begin{cvsubsection}
+{\textbf{\href{https://github.com/CHENLongyeLucien/Feikuai}{\underline{Feikuai}}} | \textbf{Pipeline multi-agents IA de sécurisation de paiements}} {Hackathon ESSEC $\times$ Kryptosphere, Secure Horizons} {Oct. 2026} {}
+
+\listitem Conçu en équipe de 3 un système aligné sur DORA qui protège les paiements en stablecoins contre le phishing, la fausse facture et l'injection de prompt : l'IA lit, des règles décident, un humain signe.
+\listitem Développé l'API, les outils MCP et la signature EIP-712 des paiements : 97\,\% de 1\,821 attaques bloquées, 0 paiement frauduleux sur 1\,896 tentatives, 143 tests.
+
+\end{cvsubsection}
+
+\begin{cvsubsection}
+{\textbf{\href{https://github.com/CHENLongyeLucien/Mycelium}{\underline{Mycelium}}} | \textbf{Visualiseur de dépendances npm}} {Extension Chrome open source} {Nov. 2026} {}
+
+\listitem Conçu et développé une extension Chrome qui transforme le package.json d'un dépôt GitHub public en graphe interactif de dépendances npm (300 nœuds, 3 niveaux), via un service worker Manifest V3 et l'API du registre npm.
+\listitem Ajouté recherche, filtres de statut (obsolète, déprécié, non résolu) et export PNG ; testé avec Vitest, traitement 100\,\% local.
+
+\end{cvsubsection}
+
+\begin{cvsubsection}
+{\textbf{\href{https://github.com/CHENLongyeLucien/Odyssey}{\underline{Odyssey}}} | \textbf{Jeu 3D navigateur avec compagnons IA}} {Hackathon \{Tech: Europe\} AI Gaming Hack Paris} {Sept. 2026} {}
+
+\listitem Livré en équipe de 3 un MVP jouable en ligne (\href{https://troy-120.vercel.app}{\underline{Vercel}}) avec un parcours utilisateur complet d'environ 2 minutes, compatible clavier et manette.
+\listitem Intégré Gemini, Gradium et Lyria pour rendre les compagnons pilotables à la voix ou au texte, avec des ordres en langage naturel traduits en actions validées par les règles du jeu.
+
+\end{cvsubsection}
+
+\end{cvsection}
+
+\begin{cvsection}{Compétences, Langues et Certificats}
+
+\descitem [Langages :] Python, TypeScript, JavaScript, Java, C, SQL, Solidity, Bash, HTML/CSS, RISC-V
+\descitem [Frameworks et bibliothèques :] React, Node.js, Three.js, Cytoscape.js, FastAPI, Flask
+\descitem [Bases de données :] PostgreSQL, MSSQL
+\descitem [Outils et infrastructure :] Git, GitHub, Docker, Vitest, pnpm, Proxmox VE, GLPI, Ollama
+\descitem [Domaines :] Extensions Chrome (Manifest V3), API REST, Agents IA (MCP), Tests unitaires
+\descitem [Certificats : IBM SkillsBuild -- ] \href{https://www.credly.com/badges/942aa2ea-c60e-4343-9da9-fcaad618f717/public_url}{\underline{Artificial Intelligence Fundamentals}}, \href{https://www.credly.com/badges/f42f2621-21d8-478a-9dae-b04f33677714/public_url}{\underline{Web Development Fundamentals}}
+\descitem [Langues :] Français (langue maternelle), Anglais (C1), Chinois (courant)
+
+\end{cvsection}
+
+\end{cv}
+
+\end{document}
