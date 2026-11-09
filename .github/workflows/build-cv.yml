@@ -3,7 +3,7 @@ name: Build CV PDF
 on:
   push:
     branches: [main]
-    paths: ["Longye_Chen_cv.tex"]
+    paths: ["Longye_Chen_cv.tex", "cv_template.cls", ".github/workflows/build-cv.yml"]
   workflow_dispatch:
 
 permissions:
