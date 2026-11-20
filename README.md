@@ -1,8 +1,52 @@
-# resume
-LaTeX template for my personal resume
+# CV — LaTeX
 
-Based off of [sb2nov/resume](https://github.com/sb2nov/resume/)
+Mon CV rédigé en LaTeX, avec sa version compilée en PDF.
 
-Use it on overleaf: [Jake's Resume](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) (Not updated)
+📄 **[Voir le CV (PDF)](main.pdf)**
 
-![Resume Preview](resume.png)
+## Contenu du dépôt
+
+| Fichier | Rôle |
+|---|---|
+| [`main.tex`](main.tex) | Source LaTeX du CV |
+| [`main.pdf`](main.pdf) | CV compilé |
+| [`build.ps1`](build.ps1) | Script de compilation (Windows / PowerShell) |
+| [`Makefile`](Makefile) | Compilation sous Linux / macOS / Git Bash |
+| [`LICENSE`](LICENSE) | Licence MIT du modèle d'origine |
+
+## Compiler
+
+Le document se compile avec **Tectonic** (recommandé), **pdfLaTeX**, **XeLaTeX** ou **LuaLaTeX**.
+
+**Windows (PowerShell)**
+
+```powershell
+.\build.ps1
+```
+
+**Linux / macOS / Git Bash**
+
+```bash
+make            # utilise tectonic
+make TEX=pdflatex
+```
+
+**En ligne** : importer `main.tex` dans [Overleaf](https://www.overleaf.com/) puis cliquer sur *Recompile*.
+
+### Installer Tectonic
+
+Télécharger l'exécutable depuis les [releases officielles](https://github.com/tectonic-typesetting/tectonic/releases),
+le placer dans le `PATH` (ou dans `%LOCALAPPDATA%\Programs\tectonic\`). Les paquets LaTeX nécessaires
+sont téléchargés automatiquement à la première compilation.
+
+## Personnaliser
+
+- Les coordonnées sont dans le bloc `HEADING` de `main.tex`.
+- Chaque section (Education, Experience, Projects, Technical Skills) utilise les commandes
+  `\resumeSubheading`, `\resumeItem`, `\resumeProjectHeading`.
+- Plusieurs polices sont proposées en commentaire dans la section `FONT OPTIONS`.
+
+## Crédits
+
+Basé sur le modèle [Jake's Resume](https://github.com/jakegut/resume) de Jake Gutierrez,
+lui-même dérivé de [sb2nov/resume](https://github.com/sb2nov/resume). Distribué sous licence MIT.
