@@ -1,10 +1,10 @@
-# Compile main.tex en main.pdf (Linux / macOS / Git Bash)
+# Compile longye_chen_resume.tex en longye_chen_resume.pdf (Linux / macOS / Git Bash)
 TEX ?= tectonic
 
-all: main.pdf
+all: longye_chen_resume.pdf
 
-main.pdf: main.tex
-	$(TEX) main.tex
+longye_chen_resume.pdf: longye_chen_resume.tex
+	$(TEX) longye_chen_resume.tex
 
 clean:
 	rm -f *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz *.xdv

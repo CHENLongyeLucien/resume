@@ -1,4 +1,4 @@
-# Compile main.tex en main.pdf.
+# Compile longye_chen_resume.tex en longye_chen_resume.pdf.
 # Utilise Tectonic s'il est disponible, sinon pdflatex (MiKTeX / TeX Live).
 Set-Location $PSScriptRoot
 
@@ -9,9 +9,9 @@ if (-not $tectonic) {
 }
 
 if ($tectonic) {
-    & $tectonic main.tex
+    & $tectonic longye_chen_resume.tex
 } elseif (Get-Command pdflatex -ErrorAction SilentlyContinue) {
-    pdflatex -interaction=nonstopmode main.tex
+    pdflatex -interaction=nonstopmode longye_chen_resume.tex
 } else {
     Write-Error "Aucun compilateur LaTeX trouve (installer Tectonic ou MiKTeX)."
     exit 1

@@ -2,14 +2,14 @@
 
 Mon CV rédigé en LaTeX, avec sa version compilée en PDF.
 
-📄 **[Voir le CV (PDF)](main.pdf)**
+📄 **[Voir le CV (PDF)](longye_chen_resume.pdf)**
 
 ## Contenu du dépôt
 
 | Fichier | Rôle |
 |---|---|
-| [`main.tex`](main.tex) | Source LaTeX du CV |
-| [`main.pdf`](main.pdf) | CV compilé |
+| [`longye_chen_resume.tex`](longye_chen_resume.tex) | Source LaTeX du CV |
+| [`longye_chen_resume.pdf`](longye_chen_resume.pdf) | CV compilé |
 | [`build.ps1`](build.ps1) | Script de compilation (Windows / PowerShell) |
 | [`Makefile`](Makefile) | Compilation sous Linux / macOS / Git Bash |
 | [`LICENSE`](LICENSE) | Licence MIT du modèle d'origine |
@@ -31,7 +31,7 @@ make            # utilise tectonic
 make TEX=pdflatex
 ```
 
-**En ligne** : importer `main.tex` dans [Overleaf](https://www.overleaf.com/) puis cliquer sur *Recompile*.
+**En ligne** : importer `longye_chen_resume.tex` dans [Overleaf](https://www.overleaf.com/) puis cliquer sur *Recompile*.
 
 ### Installer Tectonic
 
@@ -41,7 +41,7 @@ sont téléchargés automatiquement à la première compilation.
 
 ## Personnaliser
 
-- Les coordonnées sont dans le bloc `HEADING` de `main.tex`.
+- Les coordonnées sont dans le bloc `HEADING` de `longye_chen_resume.tex`.
 - Chaque section (Education, Experience, Projects, Technical Skills) utilise les commandes
   `\resumeSubheading`, `\resumeItem`, `\resumeProjectHeading`.
 - Plusieurs polices sont proposées en commentaire dans la section `FONT OPTIONS`.
