@@ -99,6 +99,35 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% One-line heading: title · organisation, location ........ dates
+\newcommand{\resumeOneLineHeading}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $\cdot$ #2 & #3 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Project: name ........ date
+%          context | tech stack
+\newcommand{\resumeProjectEntry}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #3 \\
+      {\small\textit{#2} $|$ \textit{#4}} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Education: school on one line, then one bullet per degree with dates on the right
+\newcommand{\resumeSchoolHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeDegreeItem}[2]{
+  \item\small{#1\hfill#2\vspace{-2pt}}
+}
+
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -132,11 +161,11 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Sorbonne University}{Paris, France}
-      {\textup{Bachelor's Degree, Computer Science}}{\textup{2025 -- Present}}
-    \resumeSubSubheading
-      {\textup{Bachelor's Degree, Mathematics and Computer Science}}{\textup{2023 -- 2025}}
+    \resumeSchoolHeading{Sorbonne University}{Paris, France}
+      \resumeItemListStart
+        \resumeDegreeItem{Bachelor's Degree, Computer Science}{2025 -- 2028}
+        \resumeDegreeItem{Bachelor's Degree, Mathematics and Computer Science}{2023 -- 2025}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -144,44 +173,19 @@
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
+    \resumeOneLineHeading
+      {Systems \& AI Development Intern}{Lessonia, Brittany, France}{Jun -- Sep 2026}
       \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+        \resumeItem{Automated orderly shutdown on power outage with Eaton IPM for 8 Proxmox hosts, 114 VMs and 2 DataCore SANs: compared 3 solutions and defined dependency-based rules, ensuring full shutdown in under 15 min with alerts.}
+        \resumeItem{Integrated a self-hosted AI agent (Ollama, Open WebUI) with Proxmox VE and GLPI via webhooks, automatically generating a daily summary of 5--10 tickets.}
+        \resumeItem{Extended a Python natural-language query tool to support PostgreSQL and MSSQL databases, running fully locally in read-only mode (Qwen, Gemma models).}
       \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
-    \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
+    \resumeOneLineHeading
+      {International Sales \& Business Development Intern}{Lessonia, Brittany, France}{Jun -- Jul 2026}
       \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+        \resumeItem{Managed 20+ client accounts and prospects in a CRM, following up with international clients in English and Chinese.}
+        \resumeItem{Prospected potential clients and assisted the marketing team on commercial projects.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -190,37 +194,58 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+      \resumeProjectEntry
+          {\href{https://github.com/CHENLongyeLucien/Feikuai}{\underline{Feikuai}}: Multi-Agent AI Payment Security Pipeline}
+          {ESSEC $\times$ Kryptosphere Hackathon}
+          {Oct 2026}
+          {TypeScript, Solidity, React, Avalanche, Docker}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
+            \resumeItem{Designed with a team of 3 a multi-agent pipeline aligned with DORA, blocking 97\% of 1,821 attacks upstream and 0~fraudulent payments out of 1,896 attempts replayed on-chain (Avalanche).}
+            \resumeItem{Secured payment validation (143 tests) by building the API, the agents' MCP tools, EIP-712 signing and server-side key management, and contributing to the React front-end.}
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+      \resumeProjectEntry
+          {\href{https://github.com/CHENLongyeLucien/Mycelium}{\underline{Mycelium}}: npm Dependency Visualizer}
+          {Open-source Chrome extension}
+          {Nov 2026}
+          {TypeScript, Cytoscape.js, Manifest V3, Vitest}
           \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+            \resumeItem{Built a Chrome extension (Manifest V3, npm registry API) that turns a GitHub repository's package.json into an interactive dependency graph (up to 3 levels, 300 nodes).}
+            \resumeItem{Implemented rate-limited requests with retries and caching, plus search, status filters and PNG export; tested with Vitest, fully client-side.}
+          \resumeItemListEnd
+      \resumeProjectEntry
+          {\href{https://github.com/CHENLongyeLucien/Odyssey}{\underline{Odyssey}}: 3D Browser Game with AI Companions}
+          {\{Tech: Europe\} Hackathon}
+          {Sep 2026}
+          {Gemini, Gradium, Lyria, Vercel}
+          \resumeItemListStart
+            \resumeItem{Shipped with a team of 3 a playable online 3D game (30 build plots, 4 city themes, 3 weapons, final boss) with persistent saves and keyboard and Xbox controller support.}
+            \resumeItem{Integrated Gemini, Gradium and Lyria to control companions by voice or text, translating natural-language orders into actions validated by the game rules.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
 
 %
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
+%-----------SKILLS AND LANGUAGES-----------
+\section{Skills and Languages}
  \begin{itemize}[leftmargin=0pt, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     \textbf{Programming}{: Python, TypeScript, JavaScript, Java, C, SQL, Solidity, Bash, RISC-V assembly} \\
+     \textbf{Frameworks \& libraries}{: React, Next.js, Node.js, Three.js, Cytoscape.js, FastAPI, Flask} \\
+     \textbf{Databases}{: PostgreSQL, MSSQL} \\
+     \textbf{Tools \& infrastructure}{: Git, GitHub, Docker, Vitest, Proxmox VE, GLPI, Ollama} \\
+     \textbf{Concepts}{: REST APIs, AI agents (MCP), Chrome extensions (Manifest V3), unit testing} \\
+     \textbf{Languages}{: French (native), English (C1), Chinese (fluent)}
     }}
  \end{itemize}
+
+
+%-----------CERTIFICATES-----------
+\section{Certificates}
+  \resumeItemListStart
+    \resumeDegreeItem{IBM SkillsBuild: \href{https://www.credly.com/badges/f42f2621-21d8-478a-9dae-b04f33677714/public_url}{\underline{Artificial Intelligence Fundamentals}}}{Sep 2026}
+    \resumeDegreeItem{IBM SkillsBuild: \href{https://www.credly.com/badges/942aa2ea-c60e-4343-9da9-fcaad618f717/public_url}{\underline{Web Development Fundamentals}}}{Sep 2026}
+  \resumeItemListEnd
 
 
 %-------------------------------------------
