@@ -127,6 +127,10 @@
 \newcommand{\resumeDegreeItem}[2]{
   \item\small{#1\hfill#2\vspace{-2pt}}
 }
+% Optional line under a degree: relevant courses
+\newcommand{\resumeCourses}[1]{%
+  \unskip\\[1pt]{\small\textit{Relevant courses:} #1}\vspace{-2pt}%
+}
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
@@ -164,6 +168,7 @@
     \resumeSchoolHeading{Sorbonne University}{Paris, France}
       \resumeItemListStart
         \resumeDegreeItem{Bachelor's Degree, Computer Science}{2025 -- Present}
+          \resumeCourses{Data Science, Algorithms, Databases, Web Development, Systems, Networks}
         \resumeDegreeItem{Bachelor's Degree, Mathematics and Computer Science}{2023 -- 2025}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
