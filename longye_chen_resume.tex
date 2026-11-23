@@ -117,19 +117,20 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-% Education: school on one line, then one bullet per degree with dates on the right
+% Education: school on one line, then one line per degree with dates on the right
 \newcommand{\resumeSchoolHeading}[2]{
   \vspace{-2pt}\item
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
-\newcommand{\resumeDegreeItem}[2]{
+% Degree line without a bullet (use inside \resumeSubHeadingListStart)
+\newcommand{\resumeDegreeLine}[2]{
   \item\small{#1\hfill#2\vspace{-2pt}}
 }
-% Optional line under a degree: relevant courses
-\newcommand{\resumeCourses}[1]{%
-  \unskip\\[1pt]{\small\textit{Relevant courses:} #1}\vspace{-2pt}%
+% Bulleted line with dates on the right (Certificates)
+\newcommand{\resumeDegreeItem}[2]{
+  \item\small{#1\hfill#2\vspace{-2pt}}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -166,11 +167,11 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSchoolHeading{Sorbonne University}{Paris, France}
-      \resumeItemListStart
-        \resumeDegreeItem{Bachelor's Degree, Computer Science}{2025 -- Present}
-          \resumeCourses{Data Science, Algorithms, Databases, Web Development, Systems, Networks}
-        \resumeDegreeItem{Bachelor's Degree, Mathematics and Computer Science}{2023 -- 2025}
-      \resumeItemListEnd
+    \resumeDegreeLine{Bachelor's Degree, Computer Science}{2025 -- Present}
+      \begin{itemize}[labelindent=0.1in, leftmargin=*, topsep=0pt, partopsep=0pt]
+        \resumeItem{\textit{Relevant courses:} Data Science, Algorithms, Databases, Web Development, Systems, Networks}
+      \end{itemize}\vspace{-3pt}
+    \resumeDegreeLine{Bachelor's Degree, Mathematics and Computer Science}{2023 -- 2025}
   \resumeSubHeadingListEnd
 
 
