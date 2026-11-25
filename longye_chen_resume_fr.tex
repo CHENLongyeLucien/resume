@@ -1,0 +1,252 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[french]{babel}
+\frenchsetup{StandardLayout=true} % keep the template's bullets and list spacing
+\usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+% Remove the space reserved for the (empty) page header
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+% (pdfLaTeX only; XeLaTeX/LuaLaTeX/Tectonic already emit Unicode text)
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% One-line heading: title · organisation, location ........ dates
+\newcommand{\resumeOneLineHeading}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $\cdot$ #2 & #3 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Project: name ........ date
+%          context | tech stack
+\newcommand{\resumeProjectEntry}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #3 \\
+      {\small\textit{#2} $|$ \textit{#4}} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Education: school on one line, then one line per degree with dates on the right
+\newcommand{\resumeSchoolHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+% Degree line without a bullet (use inside \resumeSubHeadingListStart)
+\newcommand{\resumeDegreeLine}[2]{
+  \item\small{#1\hfill#2\vspace{-2pt}}
+}
+% Bulleted line with dates on the right (Certificates)
+\newcommand{\resumeDegreeItem}[2]{
+  \item\small{#1\hfill#2\vspace{-2pt}}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[labelindent=0.1in, leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------EN-TETE----------
+{\centering
+    \textbf{\Huge \scshape Longye Chen} \\ \vspace{2pt}
+    \small +33 6 02 53 61 19 $|$ \href{mailto:lchen031205@gmail.com}{\underline{lchen031205@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/longye-chen-11ba56309/}{\underline{LinkedIn}} $|$
+    \href{https://github.com/CHENLongyeLucien}{\underline{GitHub}}
+\par}
+\vspace{-10pt}
+
+
+%-----------FORMATION-----------
+\section{Formation}
+  \resumeSubHeadingListStart
+    \resumeSchoolHeading{Sorbonne Université}{Paris, France}
+    \resumeDegreeLine{Licence d'Informatique}{2025 -- aujourd'hui}
+      \begin{itemize}[labelindent=0.1in, leftmargin=*, topsep=0pt, partopsep=0pt]
+        \resumeItem{\textit{Matières principales :} Science des données, Algorithmique, Structures de données, Bases de données,\\ Développement web, Systèmes, Réseaux}
+      \end{itemize}
+    \resumeDegreeLine{Licence de Mathématiques et Informatique}{2023 -- 2025}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Expérience professionnelle}
+  \resumeSubHeadingListStart
+
+    \resumeOneLineHeading
+      {Stagiaire Administrateur Systèmes \& Développeur IA}{Lessonia, Bretagne, France}{juin -- sept. 2026}
+      \resumeItemListStart
+        \resumeItem{Automatisation de l'arrêt ordonné sur coupure de courant avec Eaton IPM (8~hôtes Proxmox, 114~VM, 2~SAN DataCore) : comparaison de 3~solutions, règles par dépendances et arrêt complet en moins de 15~min avec alertes.}
+        \resumeItem{Intégration d'un agent IA auto-hébergé (Ollama, Open WebUI) à Proxmox VE et GLPI via des webhooks, générant automatiquement un résumé quotidien de 5 à 10~tickets.}
+        \resumeItem{Extension d'un outil Python de requêtes en langage naturel aux bases PostgreSQL et MSSQL, fonctionnant entièrement en local et en lecture seule (modèles Qwen, Gemma).}
+      \resumeItemListEnd
+
+    \resumeOneLineHeading
+      {Stagiaire Commerce International}{Lessonia, Bretagne, France}{juin -- juil. 2026}
+      \resumeItemListStart
+        \resumeItem{Gestion de 20+ comptes clients et prospects dans un CRM et suivi des clients internationaux en anglais et chinois.}
+        \resumeItem{Prospection de clients potentiels et soutien à l'équipe marketing sur des projets commerciaux.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJETS-----------
+\section{Projets}
+    \resumeSubHeadingListStart
+      \resumeProjectEntry
+          {\href{https://github.com/CHENLongyeLucien/Feikuai}{\underline{Feikuai}} : Pipeline multi-agents de sécurité des paiements par IA}
+          {Hackathon ESSEC $\times$ Kryptosphere}
+          {oct. 2026}
+          {TypeScript, Solidity, React, Avalanche, Docker}
+          \resumeItemListStart
+            \resumeItem{Conception en équipe de 3 d'un pipeline multi-agents conforme à DORA, bloquant en amont 97\,\% de 1\,821~attaques, avec 0~paiement frauduleux sur 1\,896~tentatives rejouées on-chain (Avalanche).}
+            \resumeItem{Sécurisation de la validation des paiements (143~tests) : développement de l'API, des outils MCP des agents, de la signature EIP-712 et de la gestion des clés côté serveur, et contribution au front-end React.}
+          \resumeItemListEnd
+      \resumeProjectEntry
+          {\href{https://github.com/CHENLongyeLucien/Lumen}{\underline{Lumen}} : Extension de lecteur vidéo personnalisé}
+          {Extension Chrome open source}
+          {nov. 2026}
+          {TypeScript, Manifest V3, Vitest}
+          \resumeItemListStart
+            \resumeItem{Développement d'une extension Chrome remplaçant le lecteur vidéo natif par un lecteur personnalisé (raccourcis, sous-titres, boucle A-B, dessin, zoom), écrit de zéro, sans dépendance d'exécution, dans un bundle de 17~Ko (gzip).}
+            \resumeItem{Couverture de la logique principale par 144~tests automatisés (99\,\% de couverture) ; fonctionne entièrement en local, sans pistage et avec des permissions minimales.}
+          \resumeItemListEnd
+      \resumeProjectEntry
+          {\href{https://github.com/CHENLongyeLucien/Odyssey}{\underline{Odyssey}} : Jeu 3D sur navigateur avec compagnons IA}
+          {Hackathon {\NoAutoSpacing\{Tech: Europe\}}}
+          {sept. 2026}
+          {Gemini, Gradium, Lyria, Vercel}
+          \resumeItemListStart
+            \resumeItem{Réalisation en équipe de 3 d'un jeu 3D en ligne jouable (30~parcelles constructibles, 4~thèmes de ville, 3~armes, boss final) avec sauvegardes persistantes et prise en charge du clavier et de la manette Xbox.}
+            \resumeItem{Intégration de Gemini, Gradium et Lyria pour contrôler les compagnons à la voix ou par texte, en traduisant des ordres en langage naturel en actions validées par les règles du jeu.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------COMPETENCES ET LANGUES-----------
+\section{Compétences et langues}
+ \begin{itemize}[leftmargin=0pt, label={}]
+    \small{\item{
+     \textbf{Programmation}{ : Python, TypeScript, JavaScript, Java, C, SQL, Solidity, Bash, assembleur RISC-V} \\
+     \textbf{Frameworks et bibliothèques}{ : React, Next.js, Node.js, Three.js, FastAPI, Flask} \\
+     \textbf{Bases de données}{ : PostgreSQL, MSSQL} \\
+     \textbf{Outils et infrastructure}{ : Git, GitHub, Docker, Vitest, Proxmox VE, GLPI, Ollama} \\
+     \textbf{Concepts}{ : API REST, agents IA (MCP), extensions Chrome (Manifest V3), tests unitaires} \\
+     \textbf{Langues}{ : français (langue maternelle), anglais (C1), chinois (courant)}
+    }}
+ \end{itemize}
+
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \resumeItemListStart
+    \resumeDegreeItem{IBM SkillsBuild : \href{https://www.credly.com/badges/f42f2621-21d8-478a-9dae-b04f33677714/public_url}{\underline{Artificial Intelligence Fundamentals}}}{sept. 2026}
+    \resumeDegreeItem{IBM SkillsBuild : \href{https://www.credly.com/badges/942aa2ea-c60e-4343-9da9-fcaad618f717/public_url}{\underline{Web Development Fundamentals}}}{sept. 2026}
+  \resumeItemListEnd
+
+
+%-------------------------------------------
+\end{document}

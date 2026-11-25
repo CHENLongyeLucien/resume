@@ -1,10 +1,12 @@
-# Compile longye_chen_resume.tex en longye_chen_resume.pdf (Linux / macOS / Git Bash)
+# Compile les deux versions du CV (Linux / macOS / Git Bash)
+#   longye_chen_resume.tex    -> longye_chen_resume.pdf    (anglais)
+#   longye_chen_resume_fr.tex -> longye_chen_resume_fr.pdf (francais)
 TEX ?= tectonic
 
-all: longye_chen_resume.pdf
+all: longye_chen_resume.pdf longye_chen_resume_fr.pdf
 
-longye_chen_resume.pdf: longye_chen_resume.tex
-	$(TEX) longye_chen_resume.tex
+%.pdf: %.tex
+	$(TEX) $<
 
 clean:
 	rm -f *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz *.xdv

@@ -1,16 +1,18 @@
 # CV — LaTeX
 
-Mon CV rédigé en LaTeX, avec sa version compilée en PDF.
+Mon CV rédigé en LaTeX, en anglais et en français, avec les versions compilées en PDF.
 
-📄 **[Voir le CV (PDF)](longye_chen_resume.pdf)**
+📄 **[Voir le CV en anglais (PDF)](longye_chen_resume.pdf)** · **[Voir le CV en français (PDF)](longye_chen_resume_fr.pdf)**
 
 ## Contenu du dépôt
 
 | Fichier | Rôle |
 |---|---|
-| [`longye_chen_resume.tex`](longye_chen_resume.tex) | Source LaTeX du CV |
-| [`longye_chen_resume.pdf`](longye_chen_resume.pdf) | CV compilé |
-| [`build.ps1`](build.ps1) | Script de compilation (Windows / PowerShell) |
+| [`longye_chen_resume.tex`](longye_chen_resume.tex) | Source LaTeX du CV (anglais) |
+| [`longye_chen_resume.pdf`](longye_chen_resume.pdf) | CV compilé (anglais) |
+| [`longye_chen_resume_fr.tex`](longye_chen_resume_fr.tex) | Source LaTeX du CV (français) |
+| [`longye_chen_resume_fr.pdf`](longye_chen_resume_fr.pdf) | CV compilé (français) |
+| [`build.ps1`](build.ps1) | Script de compilation des deux versions (Windows / PowerShell) |
 | [`Makefile`](Makefile) | Compilation sous Linux / macOS / Git Bash |
 | [`LICENSE`](LICENSE) | Licence MIT du modèle d'origine |
 
@@ -31,7 +33,7 @@ make            # utilise tectonic
 make TEX=pdflatex
 ```
 
-**En ligne** : importer `longye_chen_resume.tex` dans [Overleaf](https://www.overleaf.com/) puis cliquer sur *Recompile*.
+**En ligne** : importer `longye_chen_resume.tex` ou `longye_chen_resume_fr.tex` dans [Overleaf](https://www.overleaf.com/) puis cliquer sur *Recompile*.
 
 ### Installer Tectonic
 
@@ -41,9 +43,12 @@ sont téléchargés automatiquement à la première compilation.
 
 ## Personnaliser
 
-- Les coordonnées sont dans le bloc `HEADING` de `longye_chen_resume.tex`.
-- Chaque section (Education, Experience, Projects, Technical Skills) utilise les commandes
-  `\resumeSubheading`, `\resumeItem`, `\resumeProjectHeading`.
+- Les deux fichiers `.tex` ont la même structure : une modification de contenu doit être faite
+  dans les deux versions.
+- Les coordonnées sont en haut du document, juste après `\begin{document}`.
+- Les sections utilisent les commandes `\resumeOneLineHeading` (expériences),
+  `\resumeProjectEntry` (projets), `\resumeDegreeLine` (diplômes) et `\resumeItem` (puces).
+- La version française utilise `babel` en français (espaces avant « : », dates en français).
 - Plusieurs polices sont proposées en commentaire dans la section `FONT OPTIONS`.
 
 ## Crédits
